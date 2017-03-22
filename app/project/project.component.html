@@ -1,0 +1,33 @@
+<br><br>
+<div  class="col-md-3" *ngIf="projectInfo">
+    <div class="panel panel-info">
+      
+      <div class="panel-heading with-border text-center">
+          <h3 class="box-title">{{ projectInfo.name }}</h3>
+      </div>
+
+      
+
+      <div class='panel-body'>
+          <strong><i class="fa fa-envira margin-r-5"></i> {{projectInfo.biome}}</strong>
+          <p>{{projectInfo.description}}</p>
+          <strong><i class="fa fa-calendar margin-r-5"></i> Date</strong>
+          <p>{{projectInfo.date}}</p>
+          <strong><i class="fa fa-codepen margin-r-5"></i> Project ID</strong>
+          <p>{{ projectInfo._id }}</p>
+      </div>
+
+
+      <div class="box-footer ">
+            <a routerLink="dashboard" class="" > <span class="label label-primary">Projects</span></a>
+            <a routerLink="add-sample" class="" > <span class="label label-success">Add Sample</span></a>
+            <a routerLink="view-samples" class="" > <span class="label label-warning">View Samples</span></a>
+      </div>
+    </div>
+
+</div>
+<div class="col-md-9">
+    <div class="box box-primary">
+        <router-outlet></router-outlet>
+    </div>
+</div>

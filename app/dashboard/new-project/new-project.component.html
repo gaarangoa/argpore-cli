@@ -1,0 +1,37 @@
+<div class="box box-warning ">
+    <div class="box-header with-border">
+        <h3 class="box-title"><strong>New Project</strong></h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <form [formGroup]="newProjectForm" (ngSubmit)="create()">
+        <!-- text input -->
+        <div class="form-group" [ngClass]="{'has-error':!newProjectForm.controls['name'].valid && newProjectForm.controls['name'].touched}" >
+            <label>Project Name</label>
+            <input formControlName="name" [formControl]="newProjectForm.controls['name']" type="text" class="form-control" placeholder="Enter ...">
+        </div>
+
+        <!-- select -->
+        <div class="form-group" [ngClass]="{'has-error':!newProjectForm.controls['biome'].valid && newProjectForm.controls['biome'].touched}">
+            <label>Biome</label>
+            <input formControlName="biome" #biome type="text" class="form-control" placeholder="Enter ...">
+            <!--<select class="form-control">
+            <option>Soil</option>
+            </select>-->
+        </div>
+
+        <!-- textarea -->
+        <div class="form-group" [ngClass]="{'has-error':!newProjectForm.controls['description'].valid && newProjectForm.controls['description'].touched}">
+            <label>Project Description</label>
+            <textarea formControlName="description" #description class="form-control" rows="3" placeholder="Enter at least 50 characters"></textarea>
+        </div>
+
+        <div class="box-footer text-center ">
+            <button type="submit" class="btn btn-default btn-sm" [disabled]="!newProjectForm.valid"><strong>Create Project</strong></button>
+        </div>
+
+        </form>
+    </div>
+    <!-- /.box-body -->
+
+</div>

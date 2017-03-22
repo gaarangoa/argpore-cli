@@ -1,0 +1,45 @@
+<br><br>
+<div  style="text-align:center">
+    <p-dataTable #dt [value] = "sampleService.samplesByProject" [rows]="5" [paginator]="true" [pageLinks]="3"  [stacked]="stacked" exportFilename="metadata">
+         <p-header>
+            <div class="ui-helper-clearfix">
+                <button class='btn btn-xs btn-default' type="button" label="metadata.csv" (click)="dt.exportCSV()" style="float:left"><i class="fa fa-download"></i> <strong>Metadata</strong></button>
+                <button class='btn btn-xs btn-default' type="button" label="type.csv" (click)="download_type('type_csv')" style="float:left"><i class="fa fa-download"></i> <strong>ARG categories</strong></button>
+                <button class='btn btn-xs btn-default' type="button" label="type.csv" (click)="download_type('subtype_csv')" style="float:left"><i class="fa fa-download"></i> <strong>ARG Groups</strong></button>
+            </div>
+            
+        </p-header>
+        <p-column field='name' header='Sample Name'></p-column>
+        <p-column field='primary-group' header='Primary Group'></p-column>
+        <p-column field='secondary-group' header='Secondary Group'></p-column>
+        <p-column field='date' header='Createion Date'></p-column>
+        <p-column field='status' header='Analysis Status'></p-column>
+
+        <p-column styleClass="col-button">
+            <template let-sample="rowData" pTemplate="body">
+                <button class="btn btn-default btn-xs" (click)="removeSample(sample)" pButton icon="fa-trash" label="Remove"></button>
+            </template>
+        </p-column>
+
+        <!--<p-column styleClass="col-button">
+            <template let-sample="rowData" pTemplate="body">
+                <button type="text" (click)="reRun(sample)" pButton icon="fa-play" label="Run"></button>
+            </template>
+        </p-column>-->
+
+    </p-dataTable>
+
+<hr>
+
+<p-growl [value]="msgs"></p-growl>
+<p-confirmDialog header="Confirmation" icon="fa fa-question-circle" width="425"></p-confirmDialog>
+
+
+
+</div>
+
+
+
+<div class="col-md-12">
+    <chart [options]="options" style="width:60%;margin: 0 auto" ></chart>
+</div>

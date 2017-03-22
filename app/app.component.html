@@ -1,0 +1,32 @@
+<div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a routerLink="home" class="navbar-brand"><strong>ARG</strong> | nanopore </a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+
+            <li *ngIf="session.get('isLoggedIn')">
+              <a routerLink="dashboard">Dashboard</a>
+            </li>
+            <li>
+              <a routerLink="home">Documentation</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li *ngIf="!session.get('isLoggedIn')"><a routerLink="login">LogIn</a></li>
+            <li *ngIf="session.get('isLoggedIn')"><a routerLink="login" (click)="logout()">LogOut</a></li>
+          </ul>
+
+        </div>
+      </div>
+</div>
+<hr>
+<div class="container">
+  <div class="wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</div>

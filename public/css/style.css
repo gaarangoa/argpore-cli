@@ -1,0 +1,491 @@
+body{
+    font-family: 'Josefin Sans', sans-serif !important;
+    width: 100%;
+    font-size: 18px !important;
+    margin: 0px;
+    }
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+  border-radius: 20em;
+  padding: 5px;
+  background: rgba(4, 6, 95, 0.8);
+  color: white;
+}
+.placeholder {
+  margin-bottom: 20px;
+  /*background: rgba(21, 40, 60, 0.31);*/
+  /*border-radius: 20em;*/
+  /*color: #fff;*/
+}
+
+#wordcloud{
+    min-width: 100px;
+    min-height: 350px;
+}
+
+
+#network{
+    overflow:hidden;
+    background: #fff;
+    border: 1px solid #ececec;
+    height: 400px;
+}
+
+
+.home-intro{
+    /*background: rgba(4, 6, 95,1);*/
+    height: 40%;
+    min-height: 400px;
+    color: rgba(255,255,255,0.8)
+}
+
+.home-intro-left-panel h1{
+    font-size: 54px;
+    z-index: 2;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.home-intro-left-panel {
+    background: rgba(0,0,0,0.5);
+    /*background: rgba(0, 50, 80, 0.5);*/
+    /*border-radius: 1em;*/
+}
+
+.home-intro-right-panel{
+    opacity: 1;
+    /*background: rgba(0,0,0,.5);*/
+    padding-top: 5%;
+    padding-bottom: 0%;
+}
+
+.home-intro-right-panel p{
+    font-size:18px;
+    background: rgba(0,0,0,.7);
+    /*background: rgba(0, 50, 80, 0.3);*/
+}
+
+.navbar-fixed-top{
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #FFF;
+}
+
+/*.navbar-nav > li >a{
+    color: rgba(0,150,200,0.8) !important;
+}*/
+
+/*.navbar{
+    width: 100% !important;
+}*/
+
+/* Stuff for about page */
+#about img {
+    width:100%;
+}
+
+#about {
+    margin:1%;
+}
+
+#logged{
+    color: #FFF !important;
+
+}
+
+.active{
+    background: rgba(0, 0, 0, 0.9) !important;
+}
+
+
+.edit .caption{
+    background: rgba(100,100,200,0.1);
+}
+
+.description_textarea{
+    width: 100%;
+    min-height: 100px;
+}
+
+
+.item{
+    cursor: pointer; 
+}
+
+
+
+.t-nav:hover{
+    animation: pulse2 0.3s; 
+}
+
+
+
+
+
+
+/*  This class is for the footer menu where the links are also available to go to the different pages.*/
+.footer-menu{
+    width: 100%;
+    clear: both;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.footer-menu a{
+    padding:5px;
+    border: solid 0px #000;
+    color: #000;
+}
+
+/*  This section contains the different setup I made for the type of buttons that I'm using*/
+
+
+.btn-more {
+    cursor: pointer;
+    margin: 10%;
+    padding: 2%;
+    background: rgba(0, 50, 100, 0.5);
+    /*border: solid 1px;*/
+    border-color: rgb(255, 255, 255) !important;
+    color: #FFF !important;
+    font-size: 18px;
+}
+
+.btn-more a{
+    color: #FFF !important;
+    font-size: 18px;
+}
+
+
+
+/*  VISUALIZATION*/
+/*  These classes are specific for some of the visualizations I'm doing.*/
+
+/*  link and node are properties in the network I made with D3. This tag is not recognized in the W3!*/
+.link {
+    stroke: rgba(0,0,0,0.8);
+    stroke-opacity: 1;
+}
+
+.node text {
+        
+    font-size: 18px;
+}
+
+.net {
+    width:100%;
+    min-height: 600px;
+    max-width: 100%;
+    padding: 0px;
+}
+
+/*  This class is made for the google maps window*/
+.map {
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 80% !important;
+}
+
+/*  EFFECTS*/
+/*  This section contains the puse effect. I applied the same concept but in different categories.
+    For instance the pulse effect  increases the size of the element and shows a blue color.
+    For images it does not show any color. The pulse2 effect highlights the shade of the element where it
+    is  applied. This is shown in the dashboard page. Specifically, under the relevant users box. This
+    effect streches horizontally. Pulse3 is designed for the "Discover More" buttons. It is similar to the
+    hover1 with the difference that it takes a longer time and the background color is different.*/
+
+
+/*  Pulse 1*/
+@keyframes pulse {
+    0% {
+        transform: scale(1,1);
+        opacity: 0.5;
+        background: rgba(100,100,200,0.3);
+    }
+    100% {
+        transform: scale(1.05, 1.05);
+        opacity: 1;
+        background: rgba(100,100,200,0.5);
+    }
+}
+
+/*.btn:hover {
+    animation: pulse 0.4s infinite alternate;
+}*/
+
+svg text:hover {
+    animation: pulse 0.4s infinite alternate;
+}
+
+.small-box h2:hover {
+    animation: pulse 0.4s infinite alternate;
+}
+
+
+/*  Pulse 2*/
+@keyframes pulse2 {
+    0% {
+        transform: scale(1,1);
+        opacity: 0.8;
+        /*background: rgba(84, 85, 212, 0.05);*/
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 1;
+        box-shadow: 2px 2px 2px 2px rgba(212, 40, 60, 0.4);
+        /*background: rgba(84, 85, 212, 0.05);*/
+    }
+}
+
+
+.relevant-users:hover {
+    animation: pulse2 0.4s infinite alternate;
+}
+
+
+
+/*  Pulse 3*/
+@keyframes pulse3 {
+    0% {
+        transform: scale(1,1);
+        opacity: 0.5;
+        background: rgba(0,0,0,0.3);
+    }
+    100% {
+        transform: scale(1.1, 1.1);
+        opacity: 1;
+        background: rgba(0,0,0,0.5);
+    }
+}
+
+.btn-status:hover {
+    animation: pulse3 1s infinite ;
+}
+
+.btn-tm:hover {
+    animation: pulse3 1s infinite ;
+}
+
+
+/*  RESPONSIVE ELEMENTS*/
+/*  This section contains the setup I made for making the website responsive*/
+
+@media all and (max-width: 672px){
+    
+/*    Modify the header     */
+    .header, .header-menu{
+        height: 250px;
+        width:100%;
+        clear: both;
+    }
+    
+    
+    .header-menu .btn, .name {
+        width: 100%;
+        border-radius: 10%;
+    }
+    .header-menu .btn a, .name a{
+        display: block;
+        text-align: center;
+    }
+
+    .btn.name{
+        margin-left: 0px;
+    }
+    
+/*    Modify the container  */
+    .right-panel, .right-panel-dashboard, .box, .home, .container , .home-body.container, .four{
+        float: left;
+        width: 100%;
+        max-width: 95%;
+        min-width: 95%;
+        margin: 2.5%;
+        padding: 0px;
+        clear: both;
+        } 
+    
+    .box-wordcloud{
+        max-width: 500px;
+        min-width: 200px;
+        float: left;
+        clear: both;
+        margin-right: 2%;
+    }
+    
+    .right-panel-profile{
+        float: left;
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    #list-items{
+        font-size: 12px;
+    }
+    
+ 
+}
+
+
+
+@media all and (max-width: 880px){
+    
+/*    Modify the container  */
+    .right-panel, .right-panel-dashboard, .box, .home, .container , .home-body.container, .four{
+        float: left;
+        width: 100%;
+        max-width: 95%;
+        min-width: 95%;
+        margin: 2.5%;
+        padding: 0px;
+        clear: both;
+        } 
+    
+    .box-wordcloud{
+        max-width: 500px;
+        min-width: 200px;
+        float: left;
+        clear: both;
+        margin-left: 25%;
+        padding: 0px;
+        margin-top:2px;
+    }
+    
+    .right-panel-profile{
+        float: left;
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    #list-items{
+        font-size: 16px;
+    }
+    
+ 
+}
+
+
+
+
+
+
+
+
+/*This is used for the relevant tweets pannel*/
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+.bs-callout-default {
+    border-left-color: #777;
+}
+.bs-callout-default h4 {
+    color: #777;
+}
+.bs-callout-primary {
+    border-left-color: #428bca;
+}
+.bs-callout-primary h4 {
+    color: #428bca;
+}
+.bs-callout-success {
+    border-left-color: #5cb85c;
+}
+.bs-callout-success h4 {
+    color: #5cb85c;
+}
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+.bs-callout-danger h4 {
+    color: #d9534f;
+}
+.bs-callout-warning {
+    border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+    color: #f0ad4e;
+}
+.bs-callout-info {
+    border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+    color: #5bc0de;
+}
+
+
+
+
+
+/*loading spin effect*/
+
+.loader {
+    border: 3px solid #f3f3f3; /* Light grey */
+    border-top: 3px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* This is where the styles for the pricing page go
+   I tried to stay consistent with the format of the website
+*/
+.columns {
+    float: left;
+    width: 33.3%;
+    padding: 8px;
+    text-align: center;
+}
+.price {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.price-header {
+    background: rgba(0, 50, 100, 0.5);
+    /*border: solid 1px;*/
+    border-color: rgb(255, 255, 255) !important;
+    color: white;
+    font-size: 30px;
+    
+}
+.price-button {
+    background: rgba(0, 50, 100, 0.5);
+    /*border: solid 1px;*/
+    border-color: rgb(255, 255, 255) !important;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    
+}

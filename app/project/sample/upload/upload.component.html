@@ -1,0 +1,31 @@
+<div class='row'>
+  <br><br>
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default ">
+            <div class="panel-heading with-border">
+                <h3 class="panel-title">Sample Data</h3>
+            </div>
+            <div class="panel-body">
+
+              <h3>Nanopore Raw Reads</h3>
+              <p>Please upload your nanopore sequence reads in fasta format. It can be 1D or 2D. You can generate the set of reads from your samples using <code>poretools</code> </p>
+
+              <p-fileUpload [name]="sampleService.sampleInfo['input']" url="http://localhost:5510/uploadFile/" 
+                      multiple="multiple" accept=".fasta" maxFileSize="10000000000">
+              </p-fileUpload>
+
+              <h3>Barcodes</h3>
+              <p>Please upload your barcode sequences in fasta format. </p>
+              <p-fileUpload [name]="sampleService.sampleInfo['barcode']" url="http://localhost:5510/uploadFile/" 
+                      multiple="multiple" accept=".fasta" maxFileSize="10000000000">
+              </p-fileUpload>
+              <br>
+
+              <button (click)='goToParameters()' class="btn btn-default btn-sm pull-right" ><strong>Next...</strong></button>
+
+            </div>
+
+        </div>
+    </div>
+    
+</div>

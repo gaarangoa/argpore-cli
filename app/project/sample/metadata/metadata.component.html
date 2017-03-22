@@ -1,0 +1,54 @@
+    <br>
+    <div class="col-sm-8 col-sm-offset-2 panel panel-default">
+        <!-- /.box-header -->
+        <div class="panel-body">
+            <h4 class="text-center"> Let's first start by adding some relevant information about your sample.</h4>
+            <form [formGroup]="newSampleForm" (ngSubmit)="create()">
+            <!-- text input -->
+            <div class="form-group" [ngClass]="{'has-error':!newSampleForm.controls['name'].valid && newSampleForm.controls['name'].touched}" >
+                <!--<label>Sample Name</label>-->
+                <input formControlName="name" [formControl]="newSampleForm.controls['name']" type="text" class="form-control" placeholder="Sample Name">
+            </div>
+
+            <!-- select -->
+            <div class="form-group" [ngClass]="{'has-error':!newSampleForm.controls['primary-group'].valid && newSampleForm.controls['primary-group'].touched}">
+                <!--<label>Primary Group</label>-->
+                <input formControlName="primary-group" type="text" class="form-control" placeholder="Primary Group">
+                <!--<select class="form-control">
+                <option>Soil</option>
+                </select>-->
+            </div>
+
+            <div class="form-group" [ngClass]="{'has-error':!newSampleForm.controls['secondary-group'].valid && newSampleForm.controls['secondary-group'].touched}">
+                <!--<label>Primary Group</label>-->
+                <input formControlName="secondary-group" type="text" class="form-control" placeholder="Secondary Group">
+                <!--<select class="form-control">
+                <option>Soil</option>
+                </select>-->
+            </div>
+
+            <div class="form-group" [ngClass]="{'has-error':!newSampleForm.controls['location'].valid && newSampleForm.controls['location'].touched}">
+                <!--<label>Location</label>-->
+                <input formControlName="location" type="text" class="form-control" placeholder="Location">
+                <!--<select class="form-control">
+                <option>Soil</option>
+                </select>-->
+            </div>
+
+            <!-- textarea -->
+            <div class="form-group" [ngClass]="{'has-error':!newSampleForm.controls['description'].valid && newSampleForm.controls['description'].touched}">
+                <!--<label>Comments about this sample</label>-->
+                <textarea formControlName="description" #description class="form-control" rows="3" placeholder="Additional Comments"></textarea>
+            </div>
+
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary btn-xs" [disabled]="!newSampleForm.valid">Save Metadata</button>
+                <button class="btn btn-warning btn-xs" >Clear Form</button>
+            </div>
+
+            </form>
+        </div>
+        <!-- /.box-body -->
+
+    </div>
+
