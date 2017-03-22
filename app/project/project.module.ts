@@ -15,6 +15,11 @@ import { ConfirmDialogModule, ConfirmationService } from 'primeng/primeng';
 import {BrowserModule} from '@angular/platform-browser'
 
 import { ChartModule } from 'angular2-highcharts';
+import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
+export function highchartsFactory() {
+  return require('highcharts');
+}
+
 
 @NgModule({
   imports: [
@@ -27,12 +32,16 @@ import { ChartModule } from 'angular2-highcharts';
     GrowlModule,
     ConfirmDialogModule,
     BrowserModule,
-    ChartModule.forRoot(require('highcharts'))
+    ChartModule
     // NgxChartsModule,
     // BrowserModule
   ],
   providers: [
-    ConfirmationService
+    ConfirmationService,
+    {
+      provide: HighchartsStatic,
+      useFactory: highchartsFactory
+    }
   ],
   declarations: [ProjectComponent, ViewSamplesComponent]
 })
