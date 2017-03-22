@@ -22,7 +22,7 @@ export class SampleService {
 
   constructor (private http:Http){
     this.done_event = false;
-    this.upload_directory = '/Volumes/data/dev/nanopore/pipeline/Access/tmp/';
+    this.upload_directory = '/home/raid/www/argpore/access/tmp';
   }
 
   create(fields: Object) {
