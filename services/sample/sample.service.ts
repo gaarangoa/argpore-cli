@@ -27,7 +27,7 @@ export class SampleService {
 
   create(fields: Object) {
     
-    return this.http.post('http://localhost:5510/sample/create/', fields)
+    return this.http.post('http://bench.cs.vt.edu/argpore_access/sample/create/', fields)
       .map(res => {
         this.sampleInfo = res.json();
         // console.log(this.sampleInfo)
@@ -35,7 +35,7 @@ export class SampleService {
   }
 
   deleteSample(fields: Object){
-    return this.http.post('http://localhost:5510/sample/remove/', fields)
+    return this.http.post('http://bench.cs.vt.edu/argpore_access/sample/remove/', fields)
       .map( res=> {
         
         console.log(this.samplesByProject)
@@ -46,7 +46,7 @@ export class SampleService {
   }
 
   getSamplesByProject(projectID: string){
-    return this.http.get('http://localhost:5510/sample/project/'+projectID)
+    return this.http.get('http://bench.cs.vt.edu/argpore_access/sample/project/'+projectID)
       .map(res => {
         if(res.json()){
           this.samplesByProject = res.json();
@@ -55,7 +55,7 @@ export class SampleService {
   }
 
   update(fields: Object){
-    return this.http.post('http://localhost:5510/sample/update/', fields)
+    return this.http.post('http://bench.cs.vt.edu/argpore_access/sample/update/', fields)
       .map(res => {
         this.sampleInfo = res.json();
         console.log(this.sampleInfo)
@@ -63,7 +63,7 @@ export class SampleService {
   }
 
   run(fields: Object){
-    return this.http.post('http://localhost:5510/analysis/run', fields)
+    return this.http.post('http://bench.cs.vt.edu/argpore_access/analysis/run', fields)
       .map(res => {
         this.analysisSample = res.json()
         console.log("RUNNING")

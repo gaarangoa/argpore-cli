@@ -24,7 +24,7 @@ export class AuthService {
   redirectUrl: string;
 
   login(username: string, password: string) {
-    return this.http.post('http://localhost:5510/auth/login/', {email:username, password:password})
+    return this.http.post('http://bench.cs.vt.edu/argpore_access/auth/login/', {email:username, password:password})
       .map(res => {
         this.credentials = res.json();
         // console.log(this.credentials, username, password);
@@ -42,7 +42,7 @@ export class AuthService {
   }
 
   signup(data: Object){
-    return this.http.post('http://localhost:5510/auth/signup/', data)
+    return this.http.post('http://bench.cs.vt.edu/argpore_access/auth/signup/', data)
       .map(res => {
         this.credentials = res.json();
         console.log(this.credentials)

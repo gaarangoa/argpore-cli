@@ -20,7 +20,7 @@ export class ProjectService {
   }
 
   create(fields: Object) {
-    return this.http.post('http://localhost:5510/project/create/', fields)
+    return this.http.post('http://bench.cs.vt.edu/argpore_access/project/create/', fields)
       .map(res => {
         this.projectInfo = res.json()[0];
         this.projectsByUser.push(res.json())
@@ -29,14 +29,14 @@ export class ProjectService {
 
 
   readProjectByUserId(userID: string){
-    return this.http.get('http://localhost:5510/project/user/'+userID)
+    return this.http.get('http://bench.cs.vt.edu/argpore_access/project/user/'+userID)
       .map(res => {
         if(res.json()){this.projectsByUser = res.json();}
       })
   }
 
   getProjectById(projectID: string){
-    return this.http.get('http://localhost:5510/project/'+projectID)
+    return this.http.get('http://bench.cs.vt.edu/argpore_access/project/'+projectID)
       .map(res => {
         // console.log(res.json())
         this.projectInfo = res.json()[0];
@@ -44,7 +44,7 @@ export class ProjectService {
   }
 
   deleteProject(fields: Object){
-    return this.http.post('http://localhost:5510/project/remove/', fields)
+    return this.http.post('http://bench.cs.vt.edu/argpore_access/project/remove/', fields)
       .map( res=> {
         this.projectsByUser = this.projectsByUser.filter(item => item['_id'] != fields['_id'])
       });
