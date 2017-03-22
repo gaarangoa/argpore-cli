@@ -10,13 +10,13 @@
               <h3>Nanopore Raw Reads</h3>
               <p>Please upload your nanopore sequence reads in fasta format. It can be 1D or 2D. You can generate the set of reads from your samples using <code>poretools</code> </p>
 
-              <p-fileUpload [name]="sampleService.sampleInfo['input']" url="http://localhost:5510/uploadFile/" 
+              <p-fileUpload [name]="sampleService.sampleInfo['input']" url="sampleService.upload_service" 
                       multiple="multiple" accept=".fasta" maxFileSize="10000000000">
               </p-fileUpload>
 
               <h3>Barcodes</h3>
               <p>Please upload your barcode sequences in fasta format. </p>
-              <p-fileUpload [name]="sampleService.sampleInfo['barcode']" url="http://localhost:5510/uploadFile/" 
+              <p-fileUpload [name]="sampleService.sampleInfo['barcode']" url="sampleService.upload_service" 
                       multiple="multiple" accept=".fasta" maxFileSize="10000000000">
               </p-fileUpload>
               <br>

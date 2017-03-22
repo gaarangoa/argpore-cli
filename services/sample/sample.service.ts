@@ -19,10 +19,12 @@ export class SampleService {
   input_name: string;
   analysisSample: Object;
   upload_directory: string;
+  public upload_service: string;
 
   constructor (private http:Http){
     this.done_event = false;
     this.upload_directory = '/home/raid/www/argpore/access/tmp';
+    this.upload_service = 'http://bench.cs.vt.edu/argpore_access/uploadFile/';
   }
 
   create(fields: Object) {
