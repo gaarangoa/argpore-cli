@@ -1,6 +1,6 @@
 .jumbotron{
     /*image is public available from here http://www.stockvault.net/photo/127466/bacteria*/
-    background-image: url('../../../public/img/background-1.jpg') !important; 
+    background-image: url('./public/img/background-1.jpg') !important; 
     color: white !important;
 }
 
