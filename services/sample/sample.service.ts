@@ -23,7 +23,7 @@ export class SampleService {
 
   constructor (private http:Http){
     this.done_event = false;
-    this.upload_directory = '/home/raid/www/argpore/access/tmp';
+    this.upload_directory = '/home/raid/www/argpore/access/tmp/';
     this.upload_service = 'http://bench.cs.vt.edu/argpore_access/uploadFile/';
   }
 
