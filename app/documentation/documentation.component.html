@@ -1,0 +1,27 @@
+<h2> About ARGpore </h2>
+<h3>ARGpore Metagenomics Service</h3>
+
+The ARGpore service is an automated pipeline designed specifically for the annotation of Antimicrobial Resistance (AMR) genes from metagenomics samples using the MinION nanopore sequence technology.
+
+
+<h3> How to use ARGpore for data analysis </h3>
+<h4>Register with us</h4>
+Registration is required to submit your nanopore sequencing data into our platform. Please, note that the registration needs a valid email address. 
+If you don't have an account, just click in the <strong>login</strong> link placed in the top right of the window. 
+
+<h4>Check the format of your data</h4>
+Nanopore devices produce raw reads in the FAST5 format. These files provide a  variety of information from your samples. However, ARGpore does not require that information. What you need to submit to the ARGpore service is a FASTA file with your long sequence reads. Therefore, you need to substract the sequences before submiting (1D, 2D, both or the best strand). 
+<br><br>
+To obtain FASTA files from the FAST5 format you can use <a href="https://poretools.readthedocs.io/en/latest/"> poretools </a>, a flexible toolkit for exploring datasets generated from the nanopore sequencing devices. It can be as simple as typing: 
+<code>
+  poretools fasta --type best test_data/
+</code>
+to a linux/mac console to get the formated required for ARGpore. 
+For more details about poretools and how to install it please visit their <a href="https://poretools.readthedocs.io/en/latest/"> documentation </a>. 
+
+<h3>How we analyze the nanopore data</h3>
+<p>The latest version of the ARGpore pipeline includes the following steps: </p>
+<div class="col-md-8 col-md-offset-2"> 
+  <img class="img-responsive" src='./public/img/pipeline.png'>
+</div>
+

@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import {AppComponent} from './app.component';
 import {LoginComponent} from './login/login.component';
 import {HomeComponent} from './home/home.component';
+import {DocumentationComponent} from './documentation/documentation.component';
 
 export const router: Routes = [
     { path: '', component: HomeComponent},
     { path: 'home', component: HomeComponent},
     { path: 'login', component: LoginComponent},
+    { path: 'documentation', component: DocumentationComponent},
     { path: 'dashboard/project/:pid', redirectTo:'project/:pid', pathMatch:'full', data:{type: 'project'}} // The project button inside the dashboard
 ];
 

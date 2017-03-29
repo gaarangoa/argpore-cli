@@ -18,6 +18,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { ProjectModule } from './project/project.module';
 import { SampleModule } from './project/sample/sample.module';
 import { HomeComponent } from './home/home.component';
+import { DocumentationComponent } from './documentation/documentation.component';
 
 
 
@@ -26,6 +27,7 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     LoginComponent,
     HomeComponent,
+    DocumentationComponent,
   ],
   imports: [
     BrowserModule,
