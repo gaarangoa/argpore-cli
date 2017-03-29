@@ -25,3 +25,112 @@ For more details about poretools and how to install it please visit their <a hre
   <img class="img-responsive" src='./public/img/pipeline.png'>
 </div>
 
+<h3 class='col-md-12' >How to use ARGpore</h3>
+<div class="col-md-4 text-center">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4>Create a New Project</h4>
+    </div>
+    <div class="panel-body">
+      To create a New Project, go under the <strong>New project</strong> pannel and type the information that is required. Note that the description has to have at least 50 characters. 
+      <img class="img-responsive" src='./public/img/demo/createProject.png'>
+      Then click on <strong>Create Project</strong> button. If everything is right, you will get an update in the dashboard showing the new created project. 
+      <img class="img-responsive" src='./public/img/demo/createdProject.png'>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-8">
+  <div class="panel panel-default">
+    <div class="panel-heading text-center">
+      <h4>Add samples to your project</h4>
+    </div>
+    <div class="panel-body">
+      Once you created your project click on <strong>View Project</strong> button
+      <img class="img-responsive" src='./public/img/demo/projectPanel.png'>
+      Then, click on Add Sample button in the project information panel and you will be prompted with a panel with four different steps that you need to go through to. 
+      
+      <h4>Metadata</h4> 
+      <p>Requires information about your sample. Note that blank fields are not allowed.</p>
+      <ul>
+        <li>
+           <strong>Sample Name</strong>: Name of the sample you are analizing. 
+        </li>
+
+        <li>
+           <strong>Primary Group</strong>: Data related to the sample collection. For instance, soil, water, wastewater, etc. 
+        </li>
+
+        <li>
+           <strong>Secondary Group</strong>: More specific information about the sample location. For instance, if you primary group is wastewater, the secondary group can be influent, efluent, sludge, etc.  
+        </li>
+
+        <li>
+           <strong>Location</strong>: The name of the city/town/place where the sample is collected. 
+        </li>
+
+        <li>
+           <strong>Comments</strong>: Any relevant information related to the sample collection. If there are not relevant comments just put <strong>none</strong>. 
+        </li>
+
+      </ul>
+
+      <h4>Upload Files</h4> 
+      <p>Browse your reads and barcodes files. These files has to be in FASTA format.</p>
+
+      <h4>Parameters setup</h4> 
+      <p>In the current version, there are not any customizable parameter.</p>
+
+      <h4>Execute</h4> 
+      <p>Make sure you are submiting the right files and click on Execute Analysis button.</p>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="col-md-12 text-center">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4>Retrieving your sample analysis </h4>
+    </div>
+    <div class="panel-body">
+      <p>Samples submitted for analysis will be sent to one of the ARC clusters at Virginia Tech. The time required to run the jobs will vary depending on the cluster availability. In general, it takes from few minutes to few hours to get the analysis done. You will need to monitor the analysis activity under the samples table (see below). It will prompt the status of each sample. If your sample has the status <strong>RetrieveResults: SUCCESS</strong>, your sample has been processed. If there were any error during the execution, you will see an error message. If the process is going you will see a START message.</p> 
+      <p>Once the samples are processed you can download a table with the absolute abundance of the Antibiotic resistance categories (types) or groups (subtypes) that can be used for downstream analysis.</p>
+
+      <img class="img-responsive" src='./public/img/demo/retrieveResults.png'>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="col-md-4 col-md-offset-0 text-center">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4>Funding</h4>
+    </div>
+    <div class="panel-body">
+      <p>The ARGpore resource receives funding from the <strong>NSF Halting Environmental Antimicrobial Resistance Dissemination (HEARD) PIRE </strong></p>
+
+      <img class="img-responsive" src='./public/img/demo/PIRE.png'>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="col-md-8 col-md-offset-0 text-center">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4>Who is behind ARGpore</h4>
+    </div>
+    <div class="panel-body">
+      <p>ARGpore is part of a multidisciplinary collaboration between scientist from the department of Computer Science  and Environmental Engineering at Virginia Tech, including:
+         Faculty: <a href="http://bioinformatics.cs.vt.edu/zhanglab/">Dr. Liqing Zhang</a>  (CS), <a href="">Dr. Lenwood S. Heath </a> (CS), <a href="">Dr. Amy Pruden </a> (C&EE), and Dr. <a href="">Peter Vikesland</a> (C&EE)</p>
+
+         <p>ARGpore is developed and maintained by <a href="">Gustavo Arango </a>: PhD Student in the Computer Science Depatrment at Virginia Tech and <a href="">Dongjuan Dai</a> Post doctoral associate in the department of Civil and Environmental Engineering. </p>
+         
+    </div>
+  </div>
+</div>
