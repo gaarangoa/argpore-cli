@@ -22,7 +22,7 @@ export class AbsoluteAbundance {
                 let aux = Object.keys(samples[sample].ARG.type)
                 this.type_names = this.type_names.concat(aux)
                 this.subtype_names = this.subtype_names.concat(Object.keys(samples[sample].ARG.subtype))
-                // this.categories.push(samples[sample].name)
+                this.categories.push(samples[sample].name)
                 // console.log(this.subtype_names)
                 // subtype.push(Object.keys(samples[sample].ARG.subtype))
             }
