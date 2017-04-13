@@ -17,7 +17,8 @@
 
         <p-column styleClass="col-button">
             <template let-sample="rowData" pTemplate="body">
-                <button class="btn btn-default btn-xs" (click)="removeSample(sample)" pButton icon="fa-trash" label="Remove"></button>
+                <button class="btn btn-danger btn-xs" (click)="removeSample(sample)" pButton icon="fa-trash" ></button>
+                <button class="btn btn-primary btn-xs" (click)="rerun(sample)" pButton icon="fa-play" ></button>
             </template>
         </p-column>
 

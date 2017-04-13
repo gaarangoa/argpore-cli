@@ -50,19 +50,6 @@ export class ProjectComponent implements OnInit, OnDestroy {
               // console.log(this.projectInfo)
           });
 
-          // this.sampleService.getSamplesByProject(params['pid'])
-          //   .subscribe(response => {
-
-          //     console.log(params);
-              
-          //     if(this.sampleService.samplesByProject){
-          //       this.router.navigate(['project/'+params['pid']+'/view-samples']);
-          //       console.log(this.sampleService.samplesByProject)
-          //     }else{
-          //       this.router.navigate(['project/'+params['pid']+'/add-sample']);
-          //       console.log(this.sampleService.samplesByProject)
-          //     }
-          //   });
 
       })
 

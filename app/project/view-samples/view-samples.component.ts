@@ -105,6 +105,14 @@ export class ViewSamplesComponent implements OnInit {
     }
     
 
+    rerun(sample: any){
+      // console.log(sample)
+      this.sampleService.run(sample)
+        .subscribe(project => {
+          
+        });
+    }
+
     removeSample(sample: any) {
         this.confirmationService.confirm({
             message: 'Do you want to delete this sample?',
