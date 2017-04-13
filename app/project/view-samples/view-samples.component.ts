@@ -107,10 +107,18 @@ export class ViewSamplesComponent implements OnInit {
 
     rerun(sample: any){
       // console.log(sample)
-      this.sampleService.run(sample)
-        .subscribe(project => {
-          
+      this.confirmationService.confirm({
+            message: 'The analysis will run only if there were any errors during the execution.',
+            header: 'Re-run sample',
+            icon: 'fa fa-trash',
+            accept: () => {
+                this.sampleService.run(sample)
+                  .subscribe(project => {
+                    
+                  });   
+            }
         });
+
     }
 
     removeSample(sample: any) {
