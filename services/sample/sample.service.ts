@@ -52,6 +52,8 @@ export class SampleService {
       .map(res => {
         if(res.json()){
           this.samplesByProject = res.json();
+        }else{
+          this.samplesByProject = undefined;
         }
       })
   }

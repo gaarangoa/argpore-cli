@@ -22,7 +22,6 @@ export class MyProjectsComponent implements OnInit {
                 this.projectService.readProjectByUserId(session.get('user')['_id'])
                     .subscribe(()=>{
                         // console.log(this.projectService.projectsByUser)
-                        
                     })
                 
               }

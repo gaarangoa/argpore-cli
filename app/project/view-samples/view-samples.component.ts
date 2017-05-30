@@ -50,9 +50,10 @@ export class ViewSamplesComponent implements OnInit {
       this.sub = this.route.params.subscribe(
         params => {
           // this.dt.reset();
+          
           this.sampleService.getSamplesByProject(this.projectComponent.projectID)
             .subscribe(response =>{
-            
+              
               // console.log(this.sampleService.samplesByProject)
               let samples = this.sampleService.samplesByProject
               
